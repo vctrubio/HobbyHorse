@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :organisations
+  has_many :workshops, through: :organisations
 end

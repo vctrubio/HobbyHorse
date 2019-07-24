@@ -5,7 +5,7 @@
 <br>
 <div>
   <% @organisations.each do |organisation| %>
-  <li class="btn">
+  <li class="btn-default">
     <%= link_to organisation.name, organisation_path(organisation.id)  %>
   </li>
   </div>

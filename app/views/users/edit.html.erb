@@ -1,0 +1,35 @@
+<h1>User#edit</h1>
+<p>Find me in app/views/user/edit.html.erb</p>
+
+<%= simple_form_for @user do |f| %>
+<%= f.input :email,
+            required: true,
+            autofocus: true,
+            input_html: { autocomplete: "email" },
+            placeholder: "victor@gmail.com" %>
+<%= f.input :first_name,
+                required: true,
+                autofocus: true %>
+    <%= f.input :last_name,
+                required: true,
+                autofocus: true %>
+     <%= f.input :city,
+                required: true,
+                autofocus: true %>
+    <%= f.input :phone_number,
+                required: true,
+                autofocus: true,
+                placeholder: "no spaces no country code" %>
+    <%= f.input :password,
+                required: true,
+                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                input_html: { autocomplete: "new-password" },
+                placeholder: "Please confirm your password" %>
+    <%= f.input :password_confirmation,
+                required: true,
+                input_html: { autocomplete: "new-password" } %>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Update" %>
+  </div>
+<% end %>
