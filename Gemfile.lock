@@ -225,7 +225,7 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   bootsnap
-  bundler
+  bundler (~> 2.0.1)
   carrierwave (~> 1.2)
   cloudinary (~> 1.9.1)
   devise
@@ -252,4 +252,4 @@ RUBY VERSION
    ruby 2.5.3p105
 
 BUNDLED WITH
-   2.0.1
+   2.0.2
