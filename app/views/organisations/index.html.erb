@@ -1,0 +1,14 @@
+<h1>All Organisation going on around you</h1>
+<h2>Click on one and sign up to their workshop using your credits!</h2>
+<h3>Don't forget to upgrade your credits <span>here</span></h3>
+<br>
+<br>
+<div>
+  <% @organisations.each do |organisation| %>
+  <li class="btn">
+    <%= link_to organisation.name, organisation_path(organisation.id)  %>
+  </li>
+  </div>
+<% end %>
+
+

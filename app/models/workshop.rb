@@ -1,3 +1,3 @@
 class Workshop < ApplicationRecord
-  belongs_to :organisation
+  belongs_to :organisation, through: :users
 end
