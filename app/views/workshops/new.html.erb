@@ -1,2 +1,20 @@
 <h1>Workshops#new</h1>
 <p>Find me in app/views/workshops/new.html.erb</p>
+
+
+<%= simple_form_for @workshop do |f| %>
+  <%= f.input :title, label: 'What are you offering', error: 'Title is mandatory, use it to attract seagels!' %>
+  <%= f.input :location %>
+  <%= f.input :price %>
+  <%= f.input :duration,label: 'For how long: hrs' %>
+  <%= f.input :category, placeholder: 'ie: fitness, lesuire or pleasure' %>
+  <%= f.input :date, label: 'When do you plan on having it?' %>
+  <%= f.input :capacity, label: 'Lastly, How many people can come?' %>
+  <h2>ps: Sorry its not the best</h2>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
+
+
+
+
+

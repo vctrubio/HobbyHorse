@@ -1,6 +1,6 @@
 class WorkshopsController < ApplicationController
 
-  # before_action :find_workshop
+  before_action :find_workshop, only: [:show]
 
   def index
     @workshops = Workshop.all
@@ -15,6 +15,11 @@ class WorkshopsController < ApplicationController
 
   def create
     @workshop = Workshop.new(workshop_params)
+      if @workshop.save
+      redirect_to workshop_path(@workshop)
+     else
+     render :new
+     end
   end
 
   def edit
@@ -29,11 +34,11 @@ class WorkshopsController < ApplicationController
   private
 
   def workshop_params
-  params.require(:workshop).permit(:date, :price, :title, :capacity)
+  params.require(:workshop).permit(:date, :price, :title, :capacity, :location, :category, :duration, :photo, :organisation)
   end
 
-   # def find_workshop
-   # @workshop = Workshop.find(params[:id])
-   # end
+   def find_workshop
+   @workshop = Workshop.find(params[:id])
+   end
 
 end

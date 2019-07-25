@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_24_135644) do
+ActiveRecord::Schema.define(version: 2019_07_25_095723) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,10 @@ ActiveRecord::Schema.define(version: 2019_07_24_135644) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "title"
+    t.string "photo", default: "https://res.cloudinary.com/vvrruubb69e/image/upload/v1553290806/photo-1521017432531-fbd92d768814.jpg"
+    t.time "duration"
+    t.string "location"
+    t.string "category"
     t.index ["organisation_id"], name: "index_workshops_on_organisation_id"
   end
 
