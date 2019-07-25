@@ -1,0 +1,18 @@
+  <% workshops.each do |w| %>
+  <div class="col-xs-12 col-sm-6 col-lg-3">
+      <%= link_to workshop_path(w) do %>
+    <div class="card-trip ">
+        <%= cl_image_tag w.photo%>
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= w.title %></h2>
+            <h3><%= w.capacity %></h3>
+            <span class="extra-details">
+              <h4 class="color-open"><%= w.location %></h4>
+            </span>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  <% end %>

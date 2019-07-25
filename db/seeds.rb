@@ -74,10 +74,10 @@ new_fondu = Organisation.create(
 
 
 workshops_one = Workshop.create(
-  title: "1hr workout in the park",
+  title: "Workout in the park",
   capacity: 7,
   price: 2,
-  organisation_id: new_fondu)
+  organisation: new_fondu)
 
 workshops_two = Workshop.create(
   title: "1hr workout in the lake",

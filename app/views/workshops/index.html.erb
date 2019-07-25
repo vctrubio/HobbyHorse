@@ -1,23 +1,8 @@
 
 <h1>All Workshops on offer </h1>
 
-<% @workshops.each do |w| %>
 
-
-<div class="container">
-  <div class="row">
-    <%= w.title %>
-    <br>
-  <p>sing-up</p>
-  </div>
-</div>
-
-
-
-<% end %>
-
-
-
+        <%= render 'components/cards', workshops: @workshops  %>
 
 
 
